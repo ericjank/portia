@@ -89,7 +89,6 @@ install_splash(){
     activate_venv
     dockerfiles/splash/provision.sh \
         prepare_install \
-#        install_qtwebkit_deps \
         install_builddeps \
         install_deps \
         install_pyqt5
