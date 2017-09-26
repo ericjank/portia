@@ -11,10 +11,10 @@ export default Ember.Route.extend({
     },
 
     renderTemplate() {
-        this.render('projects/project/conflicts/topbar', {
-            into: 'application',
-            outlet: 'top-bar',
-        });
+        //this.render('projects/project/conflicts/topbar', {
+        //    into: 'application',
+        //    outlet: 'top-bar',
+        //});
 
         this.render('projects/project/conflicts/resolver', {
             into: 'application',
