@@ -83,7 +83,7 @@ install_python_deps(){
 
 install_splash(){
     cd /tmp
-    curl -L -o splash.tar.gz 'https://github.com/scrapinghub/splash/archive/2.3.x.tar.gz'
+    curl -L -o splash.tar.gz 'https://github.com/ericjank/splash/archive/2.3.x.tar.gz'
     tar -xvf splash.tar.gz
     cd splash-*
     activate_venv
