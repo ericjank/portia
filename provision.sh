@@ -84,7 +84,7 @@ install_python_deps(){
 install_splash(){
     cd /tmp
     curl -L -o splash.tar.gz 'https://github.com/scrapinghub/splash/archive/2.3.x.tar.gz'
-    tar -xvf splash.tar.gz --keep-newer-files
+    tar -zxvf splash.tar.gz --keep-newer-files
     cd splash-*
     activate_venv
     dockerfiles/splash/provision.sh \
