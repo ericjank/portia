@@ -83,14 +83,14 @@ install_python_deps(){
 
 install_splash(){
     cd /tmp
-    curl -L -o splash.tar.gz 'https://github.com/scrapinghub/splash/archive/3.0.x.tar.gz'
-    tar -zxvf splash.tar.gz --keep-newer-files
+    curl -L -o splash.tar.gz 'https://github.com/scrapinghub/splash/archive/2.3.x.tar.gz'
+    tar -xvf splash.tar.gz #--keep-newer-files
     cd splash-*
     activate_venv
     dockerfiles/splash/provision.sh \
         prepare_install \
-        install_qtwebkit_deps \
-#        install_builddeps \
+#        install_qtwebkit_deps \
+        install_builddeps \
         install_deps \
         install_pyqt5
     pip install .
