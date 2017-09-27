@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.5
+FROM ubuntu:14.04
 WORKDIR /app/slyd
 
 COPY provision.sh /app/provision.sh
