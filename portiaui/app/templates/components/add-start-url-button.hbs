@@ -1,18 +1,18 @@
 {{#tooltip-container tooltipFor="start-url-button" tooltipContainer='body' as |options|}}
     {{#if (eq options.section 'tooltip')}}
-        Toggle start page
+        选择入口页面
         {{#if newStartUrl}}
             <p>
-                Add this page as a start page for your spider
+                点击设置本页面为当前爬虫的入口页面.
             </p>
         {{else}}
             <p>
-                Remove this page from your spider's start pages
+                点击取消本页面为当前爬虫的入口页面.
             </p>
         {{/if}}
     {{else}}
         <button id="start-url-button" type="button" class="btn btn-default {{if (not newStartUrl) 'active'}}" disabled={{disableStartUrl}} {{action "toggleStartUrl"}}>
-            {{icon-button icon='url'}} Start page
+            {{icon-button icon='url'}} 设为入口
         </button>
     {{/if}}
 {{/tooltip-container}}

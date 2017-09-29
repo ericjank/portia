@@ -4,11 +4,11 @@
     {{else}}
         <span id="label-{{elementId}}" class="label label-{{labelColorClass}}">
             {{#if isSaving}}
-                Saving <span>.</span><span>.</span><span>.</span>
+                正在保存 <span>.</span><span>.</span><span>.</span>
             {{else if timeSinceLastSave}}
-                Last saved {{timeSinceLastSave}}
+                已经保存 {{timeSinceLastSave}}
             {{else}}
-                Changes are saved automatically
+                变更已自动保存
             {{/if}}
         </span>
     {{/if}}

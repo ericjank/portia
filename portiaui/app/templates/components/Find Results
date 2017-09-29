@@ -1,0 +1,22 @@
+Searching 377 files for "            No patterns defined" (case sensitive)
+
+/Library/WebServer/Documents/projects/scrapy/docker/portia/portiaui/app/templates/components/regex-pattern-list.hbs:
+    9      {{else}}
+   10          {{#tree-list-item hasChildren=spider.startUrls.length as |options|}}
+   11:             No patterns defined
+   12          {{/tree-list-item}}
+   13      {{/if}}
+
+1 match in 1 file
+
+
+Searching 377 files for "Regular expression" (case sensitive)
+
+/Library/WebServer/Documents/projects/scrapy/docker/portia/portiaui/app/templates/components/regex-pattern-list.hbs:
+   15  <div class="form-group new-pattern {{if (not newPatternCorrect) 'has-error'}}">
+   16      <div>
+   17:         {{input type='text' class="form-control" placeholder="正则表达式" spellcheck=false value=(mut newPattern) change=(action 'stopPropagation') escape-press=(action 'clearPattern') insert-newline=(action 'addPattern')}}
+   18          {{icon-button icon='add' disabled=(or (not newPattern) (not newPatternCorrect)) action=(action 'addPattern' newPattern)}}
+   19      </div>
+
+1 match in 1 file

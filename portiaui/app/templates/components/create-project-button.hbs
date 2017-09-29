@@ -1,7 +1,7 @@
 {{#if canCreateProjects}}
     <p></p>
     <div class="input-group project-create-input">
-        {{input type="text" class="form-control" value=(mut projectName) placeholder="创建一个新的挖掘目标"
+        {{input type="text" class="form-control" value=(mut projectName) placeholder="创建新项目"
           enter=(action 'addProject')}}
         <span class="input-group-btn">
             <button type="button" class="btn btn-primary" disabled={{not projectName}} {{action "addProject"}}>

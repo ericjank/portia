@@ -2,9 +2,9 @@
     {{#tree-list-item hasChildren=true as |options|}}
         {{#if (eq options.section "item")}}
             {{#list-item-text class="title"}}
-                Start Pages
+                入口页面
                 {{#help-icon}}
-                    Start Pages
+                    入口页面
                     <p>
                         Start pages are web pages that a spider will begin its crawl from. It&nbsp;will
                         then continue to other web pages according to the defined link crawling
@@ -38,13 +38,13 @@
         {{else if (eq options.section "subtrees")}}
             {{#tree-list-item hide=spider.startUrls.length as |options|}}
                 {{#list-item-text class="text-center"}}
-                    This spider has no start pages
+                    未设置入口页面
                 {{/list-item-text}}
             {{/tree-list-item}}
             {{#tree-list-item hide=spider.startUrls.length class="help" as |options|}}
                 <div class="alert alert-warning" role="alert">
                     <p>
-                        A spider needs at least one start page to start crawling from.
+                        需要设置一个入口页面才能开始数据挖掘工作.
                     </p>
                 </div>
             {{/tree-list-item}}
@@ -75,7 +75,7 @@
     {{#tree-list-item hasChildren=true as |options|}}
         {{#if (eq options.section "item")}}
             {{#list-item-text class="title"}}
-                Link Crawling
+                抓取配置
             {{/list-item-text}}
         {{else if (eq options.section "subtrees")}}
             {{#tree-list-item as |options|}}
@@ -98,10 +98,10 @@
     {{#tree-list-item hasChildren=true as |options|}}
         {{#if (eq options.section "item")}}
             {{#list-item-text class="title"}}
-                Sample Page{{#animation-container class="inline" hide=currentSample setHeight=false}}s{{/animation-container}}
+                样例{{#animation-container class="inline" hide=currentSample setHeight=false}}{{/animation-container}}
                 {{#animation-container class="inline" setHeight=false}}
                     {{#help-icon}}
-                        Sample Pages
+                        样例
                         <p>
                             A sample page is a web page with the data you want to extract annotated.
                         </p>
@@ -120,7 +120,7 @@
             {{#if currentSample}}
                 {{#animation-container}}
                     {{#link-to 'projects.project.spider' spider}}
-                        Show all samples
+                        全部样例
                     {{/link-to}}
                 {{/animation-container}}
             {{else}}

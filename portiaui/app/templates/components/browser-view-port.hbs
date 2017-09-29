@@ -29,11 +29,11 @@
 
 <div class="browser-start-page {{if browser.url 'hide'}}">
     <img src="/assets/images/portia-logo.svg" alt="Portia logo">
-    <h3>What would you like to scrape?</h3>
+    <h3>创建网络爬虫</h3>
     {{url-bar class="navbar-form" role="navigation" autofocus=true}}
     {{#if uiState.models.project.spiders.length}}
         <p>
-            You can also select one of your existing spiders from the sidebar.
+            也可以从列表里选择一个已经存在的爬虫进行编辑.
         </p>
     {{/if}}
 </div>

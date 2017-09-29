@@ -2,18 +2,18 @@
     {{#tree-list-item hasChildren=true as |options|}}
         {{#if (eq options.section "item")}}
             {{#list-item-text class="title project-listing"}}
-                Project
+                项目信息
                 {{#animation-container
                     hide=isPublished
                     class="inline project-changes"
                     setHeight=false
                 }}
-                    {{#link-to 'projects'}}Show all projects{{/link-to}}
+                    {{#link-to 'projects'}}全部项目{{/link-to}}
                 {{/animation-container}}
                 {{#animation-container hide=notPublished id="project-changes-info" class="inline project-changes" setHeight=false}}
-                    Not published
+                    非公开项目
                     {{#help-icon tooltipClasses="tooltip-wide"}}
-                        Not published
+                        非公开项目
                         <p>
                             This project has changes that have not yet been published.
                         </p>
@@ -63,9 +63,9 @@
                               icon="rollback"}}Discard changes
                         </a></li>
                     {{/if}}
-                    <li> <a href={{downloadUrl}} target='_blank'>
+                    <!--<li> <a href={{downloadUrl}} target='_blank'>
                         {{list-item-icon class="icon" icon="download"}}Download as Portia
-                    </a> </li>
+                    </a> </li>-->
                     <li><a href={{downloadCodeUrl}} target='_blank'>
                         {{list-item-icon class="icon" icon="code"}}Download as Scrapy
                     </a> </li>

@@ -2,10 +2,10 @@
     {{#tree-list-item hasChildren=true as |options|}}
         {{#if (eq options.section "item")}}
             {{#list-item-text class="title"}}
-              Spider{{#animation-container class="inline" hide=currentSpider setHeight=false}}s {{/animation-container}}&nbsp;{{pagination}}
+              爬虫{{#animation-container class="inline" hide=currentSpider setHeight=false}} {{/animation-container}}&nbsp;{{pagination}}
                 {{#animation-container class="inline" setHeight=false}}
                     {{#help-icon}}
-                        Spiders
+                        爬虫
                         <p>
                             A spider crawls web pages to extract data.
                         </p>
@@ -24,7 +24,7 @@
             {{#if currentSpider}}
                 {{#animation-container}}
                     {{#link-to 'projects.project' project class='inline project-change'}}
-                        Show all spiders
+                        全部爬虫
                     {{/link-to}}
                 {{/animation-container}}
             {{else}}
@@ -35,14 +35,13 @@
         {{else if (eq options.section "subtrees")}}
             {{#tree-list-item hide=(or project.spiders.isPending project.spiders.length) as |options|}}
                 {{#list-item-text class="text-center"}}
-                    This project has no spiders
+                    这个项目还没有创建爬虫
                 {{/list-item-text}}
             {{/tree-list-item}}
             {{#tree-list-item hide=(or project.spiders.isPending project.spiders.length) class="help" as |options|}}
                 <div class="alert alert-info" role="alert">
                     <p>
-                        To create a spider first visit a web page that you would like to start
-                        crawling from.
+                        创建一个爬虫, 通过访问目标页面可视化创建数据采集规则。 
                     </p>
                 </div>
             {{/tree-list-item}}
@@ -92,10 +91,10 @@
     {{#tree-list-item hasChildren=true as |options|}}
         {{#if (eq options.section "item")}}
             {{#list-item-text class="title"}}
-                Data Format{{#animation-container class="inline" hide=currentSchema setHeight=false}}s{{/animation-container}}
+                数据格式{{#animation-container class="inline" hide=currentSchema setHeight=false}}{{/animation-container}}
                 {{#animation-container class="inline" setHeight=false}}
                     {{#help-icon}}
-                        Data Formats
+                        数据格式
                         <p>
                             A data format describes the data that you want to extract.
                         </p>
@@ -113,7 +112,7 @@
             {{#if currentSchema}}
                 {{#animation-container}}
                     {{#link-to 'projects.project' project class='inline project-change'}}
-                        Show all schemas
+                        全部
                     {{/link-to}}
                 {{/animation-container}}
             {{else}}
